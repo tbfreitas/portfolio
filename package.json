@@ -1,0 +1,19 @@
+{
+  "name": "personal-page",
+  "version": "1.0.0",
+  "description": "Site de portfólio pessoal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/tbfreitas/personal-page.git"
+  },
+  "author": "Tarcísio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/tbfreitas/personal-page/issues"
+  },
+  "homepage": "http://tarcisio-dev.com.br",
+}

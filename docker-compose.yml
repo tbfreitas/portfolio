@@ -1,0 +1,30 @@
+version: "3"
+services:
+  personal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    # ports: 
+    #   - 8090:80
+    labels:
+      - "traefik.http.middlewares.personal-prefix.stripprefix.prefixes=/curriculo"
+      - "traefik.backend=personal"
+      - "traefik.enable=true"
+      - "traefik.port=80"
+      - "traefik.http.routers.personal.rule=Host(`tarcisio-junior.dev`)"
+      - "traefik.http.routers.personal.tls.certresolver=myresolver"
+      - "traefik.http.routers.personal.entrypoints=websecure"
+      - "traefik.http.routers.personal.middlewares=personal-prefix"
+    networks:
+      - custom_network
+
+networks:
+  custom_network:
+    external:
+      name: sistema-controle
+
+  
+
+
+  
